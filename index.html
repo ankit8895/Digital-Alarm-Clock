@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Alarm Clock</title>
+
+    <!-- link for favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+
+    <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+
+    <!-- fontawesome script to use fontawesome icon -->
+    <script src="https://kit.fontawesome.com/ce320d3db8.js" crossorigin="anonymous"></script>
+
+    <!-- link for stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <!-- main tag starts from here -->
+    <main>
+        <!-- this div for tab functionality bootstrap -->
+        <div class="tab-content" id="nav-tabContent">
+            <!-- this div shows first tab content -->
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <!-- this section show clock -->
+                <section id="currentTime-clock">
+                    <!-- it shows day -->
+                    <small id="day"></small>
+
+                    <!-- it shows date in format Jun 10 2023 -->
+                    <small id="date"></small>
+
+                    <!-- it shows current time in format HH:MM:SS-->
+                    <span id="time"></span>
+
+                    <!--  it shows seconds but above small element will show seconds also -->
+                    <small id="second"></small>
+
+                    <!--  it shows AM or PM -->
+                    <small id="zone"></small>
+                </section>
+                <!-- clock section ends here -->
+
+                <!-- it is the bottom section having add alarm inputs with add button  -->
+                <section id="bottom-section">
+                    <!-- Set Alarm heading -->
+                    <span id="setAlarm-heading">Set Alarm</span>
+
+                    <!-- div for user inputs for alarm -->
+                    <div id="input-alarm">
+                        <!-- it takes alarm time input -->
+                        <input type="number" placeholder="00" id="getUserInputHours" />
+
+                        <!-- it takes minutes input -->
+                        <input type="number" placeholder="00" id="getUserInputMinutes" />
+
+                        <!-- it takes seconds input -->
+                        <input type="number" placeholder="00" id="getUserInputSeconds" />
+
+                        <!-- to set the zone: AM or PM -->
+                        <select id="getUserInputZone">
+                            <option value="">Select Zone</option>
+                            <option value="AM">AM</option>
+                            <option value="PM">PM</option>
+                        </select>
+                    </div>
+                    <!-- alarm time input ends here -->
+
+                    <!-- add alarm button -->
+                    <button id="add-alarm">ADD ALARM</button>
+                </section>
+                <!-- bottom section ends here -->
+            </div>
+            <!-- first tab content div ends here -->
+
+            <!-- this div shows second tab content -->
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <!-- Alarm heading -->
+                <h3 id="alarmItems-heading">Alarms</h3>
+
+                <!-- it will contain all alarms list -->
+                <div id="alarmItems-wrapper"></div>
+            </div>
+            <!-- second tab page ends here -->
+        </div>
+
+        <!-- for toggle between tabs -->
+        <nav id="nav">
+            <!-- it will contain buttons for first tab and second tab for toggle -->
+            <div class="nav nav nav-tabs" id="nav-tab" role="tablist">
+                <!-- first tab button -->
+                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                    type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                    <!-- home icon for first tab -->
+                    <i class="fas fa-home"></i>
+                </button>
+
+                <!-- second tab button -->
+                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                    type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                    <!-- <img src="https://cdn-icons-png.flaticon.com/128/8826/8826103.png" alt="" style="height: 20px;"> -->
+
+                    <!-- bell icon for second tab -->
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+            </div>
+        </nav>
+    </main>
+    <!-- main tag ends here -->
+
+    <!-- bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- script for javascript file -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
