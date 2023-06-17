@@ -196,7 +196,7 @@ function createNewAlarmDOM() {
     //adding delete icon in the alarm items for deleting the set alarm
     var delButton = document.createElement("img");
     delButton.classList.add("delete");
-    delButton.setAttribute("src", "./stopAlarmsign.png");
+    delButton.setAttribute("src", "./images/stopAlarmsign.png");
 
     // deleting the alarm items functionality to remove the set alarm
     delButton.onclick = function () {
