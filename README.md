@@ -1,6 +1,6 @@
 # Digital-Alarm-Clock 
 
-# https://ankit8895.github.io/Digital-Alarm-Clock/
+https://ankit8895.github.io/Digital-Alarm-Clock/
 
 The Alarm Clock App is a sleek and user-friendly web application developed with:
 
